@@ -15,6 +15,14 @@
 		F1ACB1B726A963F100498969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1B526A963F100498969 /* LaunchScreen.storyboard */; };
 		F1ACB1C226A963F100498969 /* BalancesCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1C126A963F100498969 /* BalancesCardTests.swift */; };
 		F1ACB1CD26A963F100498969 /* BalancesCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1CC26A963F100498969 /* BalancesCardUITests.swift */; };
+		F1ACB1DC26A9649F00498969 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1DB26A9649F00498969 /* Account.swift */; };
+		F1ACB1E226A964C800498969 /* transactions_2.json in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1DE26A964C800498969 /* transactions_2.json */; };
+		F1ACB1E326A964C800498969 /* transactions_1.json in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1DF26A964C800498969 /* transactions_1.json */; };
+		F1ACB1E426A964C800498969 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1E026A964C800498969 /* accounts.json */; };
+		F1ACB1E526A964C800498969 /* transactions_3.json in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1E126A964C800498969 /* transactions_3.json */; };
+		F1ACB1E726A9661500498969 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1E626A9661500498969 /* Transaction.swift */; };
+		F1ACB1E826A98AF300498969 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1DB26A9649F00498969 /* Account.swift */; };
+		F1ACB1E926A98AF500498969 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1E626A9661500498969 /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,12 @@
 		F1ACB1C826A963F100498969 /* BalancesCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalancesCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ACB1CC26A963F100498969 /* BalancesCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesCardUITests.swift; sourceTree = "<group>"; };
 		F1ACB1CE26A963F100498969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1ACB1DB26A9649F00498969 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F1ACB1DE26A964C800498969 /* transactions_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions_2.json; sourceTree = "<group>"; };
+		F1ACB1DF26A964C800498969 /* transactions_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions_1.json; sourceTree = "<group>"; };
+		F1ACB1E026A964C800498969 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
+		F1ACB1E126A964C800498969 /* transactions_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions_3.json; sourceTree = "<group>"; };
+		F1ACB1E626A9661500498969 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		F1ACB1A926A963F000498969 /* BalancesCard */ = {
 			isa = PBXGroup;
 			children = (
+				F1ACB1DA26A9648200498969 /* Model */,
 				F1ACB1AA26A963F000498969 /* AppDelegate.swift */,
 				F1ACB1AC26A963F000498969 /* SceneDelegate.swift */,
 				F1ACB1AE26A963F000498969 /* ViewController.swift */,
@@ -106,6 +121,7 @@
 				F1ACB1B326A963F100498969 /* Assets.xcassets */,
 				F1ACB1B526A963F100498969 /* LaunchScreen.storyboard */,
 				F1ACB1B826A963F100498969 /* Info.plist */,
+				F1ACB1DD26A964B200498969 /* Resources */,
 			);
 			path = BalancesCard;
 			sourceTree = "<group>";
@@ -126,6 +142,26 @@
 				F1ACB1CE26A963F100498969 /* Info.plist */,
 			);
 			path = BalancesCardUITests;
+			sourceTree = "<group>";
+		};
+		F1ACB1DA26A9648200498969 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1ACB1DB26A9649F00498969 /* Account.swift */,
+				F1ACB1E626A9661500498969 /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1ACB1DD26A964B200498969 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1ACB1E026A964C800498969 /* accounts.json */,
+				F1ACB1DF26A964C800498969 /* transactions_1.json */,
+				F1ACB1DE26A964C800498969 /* transactions_2.json */,
+				F1ACB1E126A964C800498969 /* transactions_3.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1ACB1B726A963F100498969 /* LaunchScreen.storyboard in Resources */,
+				F1ACB1E426A964C800498969 /* accounts.json in Resources */,
+				F1ACB1E226A964C800498969 /* transactions_2.json in Resources */,
+				F1ACB1E526A964C800498969 /* transactions_3.json in Resources */,
 				F1ACB1B426A963F100498969 /* Assets.xcassets in Resources */,
+				F1ACB1E326A964C800498969 /* transactions_1.json in Resources */,
 				F1ACB1B226A963F000498969 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1ACB1AF26A963F000498969 /* ViewController.swift in Sources */,
+				F1ACB1DC26A9649F00498969 /* Account.swift in Sources */,
 				F1ACB1AB26A963F000498969 /* AppDelegate.swift in Sources */,
 				F1ACB1AD26A963F000498969 /* SceneDelegate.swift in Sources */,
+				F1ACB1E726A9661500498969 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1ACB1C226A963F100498969 /* BalancesCardTests.swift in Sources */,
+				F1ACB1E826A98AF300498969 /* Account.swift in Sources */,
+				F1ACB1E926A98AF500498969 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
