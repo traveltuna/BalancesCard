@@ -10,13 +10,6 @@ import Foundation
 extension Date {
     static let monthDict = [1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
                             7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"]
-    func monthYearStr() -> String {
-        let components = Calendar.current.dateComponents([.year, .month], from: self)
-        guard let month = components.month, let year = components.year, let monthStr = Date.monthDict[month] else {
-            return ""
-        }
-        return monthStr + "\(year)"
-    }
     
     func getYear() -> Int {
         let components = Calendar.current.dateComponents([.year], from: self)
@@ -26,5 +19,10 @@ extension Date {
     func getMonth() -> Int {
         let components = Calendar.current.dateComponents([.month], from: self)
         return components.month ?? 0
+    }
+    
+    func getDay() -> Int {
+        let components = Calendar.current.dateComponents([.day], from: self)
+        return components.day ?? 0
     }
 }

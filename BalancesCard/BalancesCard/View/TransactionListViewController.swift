@@ -14,7 +14,8 @@ final class TransactionListViewController: UIViewController {
         }
     }
     @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var amountLabel: UILabel!
+    @IBOutlet private weak var currentAmountLabel: UILabel!
+    @IBOutlet private weak var currentAmountInBaseLabel: UILabel!
     private var account: Account!
     private var transactionViewModel = TransactionViewModel()
     
@@ -45,7 +46,13 @@ final class TransactionListViewController: UIViewController {
 private extension TransactionListViewController {
     func setupLabel() {
         nameLabel.text = account.nickname
-        amountLabel.text = "JPY" + CurrencyFormatter.shared.format(with: account.currentBalanceInBase)
+        currentAmountLabel.text = account.currency + CurrencyFormatter.shared.format(with: account.currentBalance)
+        if account.currency != "JPY" {
+            currentAmountInBaseLabel.isHidden = false
+            currentAmountInBaseLabel.text = "JPY" + CurrencyFormatter.shared.format(with: account.currentBalanceInBase)
+        } else {
+            currentAmountInBaseLabel.isHidden = true
+        }
     }
     
     func registerCells() {
@@ -69,7 +76,8 @@ extension TransactionListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionListTableViewCell.identifier,
                                                  for: indexPath) as! TransactionListTableViewCell
-        cell.configure(with: transactionViewModel.monthlyTransactions[indexPath.section].transactions[indexPath.row])
+        cell.configure(with: account.currency,
+                       transaction: transactionViewModel.monthlyTransactions[indexPath.section].transactions[indexPath.row])
         return cell
     }
 }
@@ -82,7 +90,8 @@ extension TransactionListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TransactionSectionHeaderView.identifier) as! TransactionSectionHeaderView
-        header.configure(with: transactionViewModel.monthlyTransactions[section])
+        header.configure(with: account.currency,
+                         monthlyTransaction: transactionViewModel.monthlyTransactions[section])
         return header
     }
 }
