@@ -15,9 +15,57 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWv-Zb-cXp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="179"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf4-CA-ZwQ">
+                                        <rect key="frame" x="8" y="16" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ple-85-CWe">
+                                        <rect key="frame" x="8" y="52.5" width="398" height="110.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ple-85-CWe" secondAttribute="bottom" constant="16" id="1hj-mz-m5l"/>
+                                    <constraint firstItem="ple-85-CWe" firstAttribute="leading" secondItem="tWv-Zb-cXp" secondAttribute="leading" constant="8" id="54C-OT-7M6"/>
+                                    <constraint firstAttribute="trailing" secondItem="uf4-CA-ZwQ" secondAttribute="trailing" constant="8" id="CBX-i0-bQq"/>
+                                    <constraint firstItem="uf4-CA-ZwQ" firstAttribute="leading" secondItem="tWv-Zb-cXp" secondAttribute="leading" constant="8" id="TG0-F9-FLr"/>
+                                    <constraint firstItem="ple-85-CWe" firstAttribute="top" secondItem="uf4-CA-ZwQ" secondAttribute="bottom" constant="16" id="WHT-aM-JsD"/>
+                                    <constraint firstItem="uf4-CA-ZwQ" firstAttribute="top" secondItem="tWv-Zb-cXp" secondAttribute="top" constant="16" id="gCQ-b2-AEn"/>
+                                    <constraint firstAttribute="trailing" secondItem="ple-85-CWe" secondAttribute="trailing" constant="8" id="jLU-ck-yJ9"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c3B-K2-zVO">
+                                <rect key="frame" x="0.0" y="223" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tWv-Zb-cXp" secondAttribute="trailing" id="CHf-Qx-LeC"/>
+                            <constraint firstItem="tWv-Zb-cXp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IWJ-2G-pVB"/>
+                            <constraint firstItem="c3B-K2-zVO" firstAttribute="top" secondItem="tWv-Zb-cXp" secondAttribute="bottom" id="JSe-jO-Z1C"/>
+                            <constraint firstItem="c3B-K2-zVO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Rid-T1-FU4"/>
+                            <constraint firstItem="tWv-Zb-cXp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g8d-Rn-cLX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c3B-K2-zVO" secondAttribute="trailing" id="hbn-QS-pov"/>
+                            <constraint firstAttribute="bottom" secondItem="c3B-K2-zVO" secondAttribute="bottom" id="wFm-VW-Ycm"/>
+                            <constraint firstItem="tWv-Zb-cXp" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.2" id="zkN-fS-870"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="ple-85-CWe" id="kaj-k7-but"/>
+                        <outlet property="nameLabel" destination="uf4-CA-ZwQ" id="ZRO-LT-6BE"/>
+                        <outlet property="tableView" destination="c3B-K2-zVO" id="5iT-Xr-2sa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

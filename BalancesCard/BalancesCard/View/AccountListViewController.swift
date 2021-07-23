@@ -70,6 +70,8 @@ extension AccountListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let account = accountViewModel.institutions[indexPath.section].accounts[indexPath.row]
+        let vc = TransactionListViewController.instance(with: account)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -57,4 +57,11 @@ class BalancesCardTests: XCTestCase {
         XCTAssertEqual(transaction.description, "スターバックス 原宿店")
         XCTAssertEqual(transaction.id, 23)
     }
+    
+    func testCurrencyFormatter() throws {
+        let amount = 1234567273.63
+        let formattedString = CurrencyFormatter.shared.format(with: amount)
+        
+        XCTAssertEqual(formattedString, "1,234,567,273.63")
+    }
 }
