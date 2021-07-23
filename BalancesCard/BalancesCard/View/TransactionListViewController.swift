@@ -13,9 +13,7 @@ final class TransactionListViewController: UIViewController {
             tableView.tableFooterView = UIView()
         }
     }
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var currentAmountLabel: UILabel!
-    @IBOutlet private weak var currentAmountInBaseLabel: UILabel!
+    @IBOutlet private weak var headerView: TransactionListHeaderView!
     private var account: Account!
     private var transactionViewModel = TransactionViewModel()
     
@@ -28,7 +26,7 @@ final class TransactionListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabel()
+        headerView.configure(with: account)
         registerCells()
         transactionViewModel.loadTransactionJson(with: account.id) { [weak self] viewModel, errorStr in
             guard let vm = viewModel else {
@@ -44,17 +42,6 @@ final class TransactionListViewController: UIViewController {
 
 // MARK: Private Methods
 private extension TransactionListViewController {
-    func setupLabel() {
-        nameLabel.text = account.nickname
-        currentAmountLabel.text = account.currency + CurrencyFormatter.shared.format(with: account.currentBalance)
-        if account.currency != "JPY" {
-            currentAmountInBaseLabel.isHidden = false
-            currentAmountInBaseLabel.text = "JPY" + CurrencyFormatter.shared.format(with: account.currentBalanceInBase)
-        } else {
-            currentAmountInBaseLabel.isHidden = true
-        }
-    }
-    
     func registerCells() {
         tableView.register(UINib(nibName: TransactionListTableViewCell.className, bundle: nil),
                            forCellReuseIdentifier: TransactionListTableViewCell.identifier)

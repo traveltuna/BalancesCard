@@ -39,6 +39,8 @@
 		F1ACB20B26AA6F7700498969 /* TransactionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB20A26AA6F7700498969 /* TransactionSectionHeaderView.swift */; };
 		F1ACB20D26AA6F8800498969 /* TransactionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB20C26AA6F8800498969 /* TransactionSectionHeaderView.xib */; };
 		F1ACB20F26AA92D700498969 /* Date + Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB20E26AA92D700498969 /* Date + Format.swift */; };
+		F1ACB21126AAF6F400498969 /* TransactionListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB21026AAF6F400498969 /* TransactionListHeaderView.swift */; };
+		F1ACB21326AAF70500498969 /* TransactionListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB21226AAF70500498969 /* TransactionListHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		F1ACB20A26AA6F7700498969 /* TransactionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSectionHeaderView.swift; sourceTree = "<group>"; };
 		F1ACB20C26AA6F8800498969 /* TransactionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionSectionHeaderView.xib; sourceTree = "<group>"; };
 		F1ACB20E26AA92D700498969 /* Date + Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Format.swift"; sourceTree = "<group>"; };
+		F1ACB21026AAF6F400498969 /* TransactionListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListHeaderView.swift; sourceTree = "<group>"; };
+		F1ACB21226AAF70500498969 /* TransactionListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 				F1ACB20126A9B14A00498969 /* AccountSectionHeaderView.xib */,
 				F1ACB1EF26A992C100498969 /* TransactionListViewController.swift */,
 				F1ACB1F126A992D600498969 /* TransactionList.storyboard */,
+				F1ACB21026AAF6F400498969 /* TransactionListHeaderView.swift */,
+				F1ACB21226AAF70500498969 /* TransactionListHeaderView.xib */,
 				F1ACB20626AA6F2700498969 /* TransactionListTableViewCell.swift */,
 				F1ACB20826AA6F3C00498969 /* TransactionListTableViewCell.xib */,
 				F1ACB20A26AA6F7700498969 /* TransactionSectionHeaderView.swift */,
@@ -337,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1ACB21326AAF70500498969 /* TransactionListHeaderView.xib in Resources */,
 				F1ACB1B726A963F100498969 /* LaunchScreen.storyboard in Resources */,
 				F1ACB1E426A964C800498969 /* accounts.json in Resources */,
 				F1ACB1FB26A9AC9E00498969 /* AccountListTableViewCell.xib in Resources */,
@@ -373,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1ACB21126AAF6F400498969 /* TransactionListHeaderView.swift in Sources */,
 				F1ACB1FA26A9AC9E00498969 /* AccountListTableViewCell.swift in Sources */,
 				F1ACB20726AA6F2700498969 /* TransactionListTableViewCell.swift in Sources */,
 				F1ACB20B26AA6F7700498969 /* TransactionSectionHeaderView.swift in Sources */,

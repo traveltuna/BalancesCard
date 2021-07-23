@@ -10,11 +10,7 @@ import UIKit
 final class TransactionSectionHeaderView: UITableViewHeaderFooterView {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var totalInAmountLabel: UILabel!
-    @IBOutlet private weak var totalOutAmountLabel: UILabel! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet private weak var totalOutAmountLabel: UILabel!
     @IBOutlet private weak var totalInAmountView: UIView!
     @IBOutlet private weak var totalOutAmountView: UIView!
     
