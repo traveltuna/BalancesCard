@@ -15,7 +15,7 @@ struct Transaction: Codable {
     let accountId: Int
     let amount: Double
     let categoryId: Int
-    let date: String
+    let date: Date
     let description: String
     let id: Int
     

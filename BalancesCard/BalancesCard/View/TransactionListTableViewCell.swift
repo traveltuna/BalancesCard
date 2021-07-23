@@ -8,16 +8,8 @@
 import UIKit
 
 final class TransactionListTableViewCell: UITableViewCell {
+    
+    func configure(with transaction: Transaction) {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

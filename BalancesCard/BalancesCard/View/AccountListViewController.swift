@@ -24,8 +24,10 @@ final class AccountListViewController: UIViewController {
                 return
             }
             self?.accountViewModel = vm
-            self?.amountLabel.text = "JPY" + CurrencyFormatter.shared.format(with: vm.totalAmount)
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self?.amountLabel.text = "JPY" + CurrencyFormatter.shared.format(with: vm.totalAmount)
+                self?.tableView.reloadData()
+            }
         }
     }
 }

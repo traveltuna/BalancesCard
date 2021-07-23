@@ -38,6 +38,7 @@
 		F1ACB20926AA6F3C00498969 /* TransactionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB20826AA6F3C00498969 /* TransactionListTableViewCell.xib */; };
 		F1ACB20B26AA6F7700498969 /* TransactionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB20A26AA6F7700498969 /* TransactionSectionHeaderView.swift */; };
 		F1ACB20D26AA6F8800498969 /* TransactionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB20C26AA6F8800498969 /* TransactionSectionHeaderView.xib */; };
+		F1ACB20F26AA92D700498969 /* Date + Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB20E26AA92D700498969 /* Date + Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		F1ACB20826AA6F3C00498969 /* TransactionListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListTableViewCell.xib; sourceTree = "<group>"; };
 		F1ACB20A26AA6F7700498969 /* TransactionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSectionHeaderView.swift; sourceTree = "<group>"; };
 		F1ACB20C26AA6F8800498969 /* TransactionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionSectionHeaderView.xib; sourceTree = "<group>"; };
+		F1ACB20E26AA92D700498969 /* Date + Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				F1ACB1FD26A9ACE800498969 /* ClassName.swift */,
 				F1ACB20326AA613700498969 /* CurrencyFormatter.swift */,
+				F1ACB20E26AA92D700498969 /* Date + Format.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				F1ACB1FE26A9ACE800498969 /* ClassName.swift in Sources */,
 				F1ACB1E726A9661500498969 /* Transaction.swift in Sources */,
 				F1ACB20026A9B12000498969 /* AccountSectionHeaderView.swift in Sources */,
+				F1ACB20F26AA92D700498969 /* Date + Format.swift in Sources */,
 				F1ACB1F726A99A4100498969 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
