@@ -27,6 +27,13 @@
 		F1ACB1F226A992D600498969 /* TransactionList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1F126A992D600498969 /* TransactionList.storyboard */; };
 		F1ACB1F426A995D900498969 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1F326A995D900498969 /* AccountViewModel.swift */; };
 		F1ACB1F726A99A4100498969 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1F626A99A4100498969 /* TransactionViewModel.swift */; };
+		F1ACB1FA26A9AC9E00498969 /* AccountListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1F826A9AC9E00498969 /* AccountListTableViewCell.swift */; };
+		F1ACB1FB26A9AC9E00498969 /* AccountListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB1F926A9AC9E00498969 /* AccountListTableViewCell.xib */; };
+		F1ACB1FE26A9ACE800498969 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1FD26A9ACE800498969 /* ClassName.swift */; };
+		F1ACB20026A9B12000498969 /* AccountSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB1FF26A9B12000498969 /* AccountSectionHeaderView.swift */; };
+		F1ACB20226A9B14A00498969 /* AccountSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1ACB20126A9B14A00498969 /* AccountSectionHeaderView.xib */; };
+		F1ACB20426AA613700498969 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB20326AA613700498969 /* CurrencyFormatter.swift */; };
+		F1ACB20526AA613D00498969 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ACB20326AA613700498969 /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +78,12 @@
 		F1ACB1F126A992D600498969 /* TransactionList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionList.storyboard; sourceTree = "<group>"; };
 		F1ACB1F326A995D900498969 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		F1ACB1F626A99A4100498969 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		F1ACB1F826A9AC9E00498969 /* AccountListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListTableViewCell.swift; sourceTree = "<group>"; };
+		F1ACB1F926A9AC9E00498969 /* AccountListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountListTableViewCell.xib; sourceTree = "<group>"; };
+		F1ACB1FD26A9ACE800498969 /* ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassName.swift; sourceTree = "<group>"; };
+		F1ACB1FF26A9B12000498969 /* AccountSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSectionHeaderView.swift; sourceTree = "<group>"; };
+		F1ACB20126A9B14A00498969 /* AccountSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSectionHeaderView.xib; sourceTree = "<group>"; };
+		F1ACB20326AA613700498969 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +137,7 @@
 				F1ACB1DA26A9648200498969 /* Model */,
 				F1ACB1EA26A9926700498969 /* View */,
 				F1ACB1F526A99A0300498969 /* ViewModel */,
+				F1ACB1FC26A9ACD600498969 /* Utility */,
 				F1ACB1AA26A963F000498969 /* AppDelegate.swift */,
 				F1ACB1AC26A963F000498969 /* SceneDelegate.swift */,
 				F1ACB1B326A963F100498969 /* Assets.xcassets */,
@@ -177,6 +191,10 @@
 			children = (
 				F1ACB1EB26A9927F00498969 /* AccountListViewController.swift */,
 				F1ACB1ED26A9928F00498969 /* AccountList.storyboard */,
+				F1ACB1F826A9AC9E00498969 /* AccountListTableViewCell.swift */,
+				F1ACB1F926A9AC9E00498969 /* AccountListTableViewCell.xib */,
+				F1ACB1FF26A9B12000498969 /* AccountSectionHeaderView.swift */,
+				F1ACB20126A9B14A00498969 /* AccountSectionHeaderView.xib */,
 				F1ACB1EF26A992C100498969 /* TransactionListViewController.swift */,
 				F1ACB1F126A992D600498969 /* TransactionList.storyboard */,
 			);
@@ -190,6 +208,15 @@
 				F1ACB1F626A99A4100498969 /* TransactionViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F1ACB1FC26A9ACD600498969 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F1ACB1FD26A9ACE800498969 /* ClassName.swift */,
+				F1ACB20326AA613700498969 /* CurrencyFormatter.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,10 +324,12 @@
 			files = (
 				F1ACB1B726A963F100498969 /* LaunchScreen.storyboard in Resources */,
 				F1ACB1E426A964C800498969 /* accounts.json in Resources */,
+				F1ACB1FB26A9AC9E00498969 /* AccountListTableViewCell.xib in Resources */,
 				F1ACB1E226A964C800498969 /* transactions_2.json in Resources */,
 				F1ACB1E526A964C800498969 /* transactions_3.json in Resources */,
 				F1ACB1B426A963F100498969 /* Assets.xcassets in Resources */,
 				F1ACB1F226A992D600498969 /* TransactionList.storyboard in Resources */,
+				F1ACB20226A9B14A00498969 /* AccountSectionHeaderView.xib in Resources */,
 				F1ACB1E326A964C800498969 /* transactions_1.json in Resources */,
 				F1ACB1EE26A9928F00498969 /* AccountList.storyboard in Resources */,
 			);
@@ -327,13 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1ACB1FA26A9AC9E00498969 /* AccountListTableViewCell.swift in Sources */,
+				F1ACB20426AA613700498969 /* CurrencyFormatter.swift in Sources */,
 				F1ACB1F026A992C100498969 /* TransactionListViewController.swift in Sources */,
 				F1ACB1F426A995D900498969 /* AccountViewModel.swift in Sources */,
 				F1ACB1DC26A9649F00498969 /* Account.swift in Sources */,
 				F1ACB1EC26A9927F00498969 /* AccountListViewController.swift in Sources */,
 				F1ACB1AB26A963F000498969 /* AppDelegate.swift in Sources */,
 				F1ACB1AD26A963F000498969 /* SceneDelegate.swift in Sources */,
+				F1ACB1FE26A9ACE800498969 /* ClassName.swift in Sources */,
 				F1ACB1E726A9661500498969 /* Transaction.swift in Sources */,
+				F1ACB20026A9B12000498969 /* AccountSectionHeaderView.swift in Sources */,
 				F1ACB1F726A99A4100498969 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1ACB1C226A963F100498969 /* BalancesCardTests.swift in Sources */,
+				F1ACB20526AA613D00498969 /* CurrencyFormatter.swift in Sources */,
 				F1ACB1E826A98AF300498969 /* Account.swift in Sources */,
 				F1ACB1E926A98AF500498969 /* Transaction.swift in Sources */,
 			);
