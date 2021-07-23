@@ -38,6 +38,7 @@ private extension TransactionListHeaderView {
     func instantiateView() {
         let nib = UINib(nibName: TransactionListHeaderView.className, bundle: .main)
         let rootView = nib.instantiate(withOwner: self).first as! UIView
+        rootView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         rootView.frame = self.bounds
         self.addSubview(rootView)
     }
