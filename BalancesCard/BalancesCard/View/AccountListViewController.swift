@@ -18,6 +18,7 @@ final class AccountListViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor.orange
         registerCells()
         accountViewModel.loadAccountsJson { [weak self] viewModel, errorStr in
             guard let vm = viewModel else {

@@ -26,15 +26,19 @@ final class TransactionListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView.configure(with: account)
         registerCells()
         transactionViewModel.loadTransactionJson(with: account.id) { [weak self] viewModel, errorStr in
+            guard let self = self else {
+                return
+            }
             guard let vm = viewModel else {
                 return
             }
-            self?.transactionViewModel = vm
+            self.transactionViewModel = vm
+            self.headerView.configure(with: self.account,
+                                      latestTransaction: vm.monthlyTransactions.first)
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
@@ -72,7 +76,7 @@ extension TransactionListViewController: UITableViewDataSource {
 // MARK: UITableViewDelegate Methods
 extension TransactionListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 50
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

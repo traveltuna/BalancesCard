@@ -25,4 +25,12 @@ extension Date {
         let components = Calendar.current.dateComponents([.day], from: self)
         return components.day ?? 0
     }
+    
+    static func currentMonthYearStr() -> String {
+        let now = Date()
+        guard let monthStr = Date.monthDict[now.getMonth()] else {
+            return ""
+        }
+        return monthStr + " \(now.getYear())"
+    }
 }

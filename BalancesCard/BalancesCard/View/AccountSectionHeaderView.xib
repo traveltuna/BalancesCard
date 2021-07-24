@@ -18,7 +18,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDy-4B-Fh2">
-                            <rect key="frame" x="16" y="52.5" width="382" height="21"/>
+                            <rect key="frame" x="8" y="52.5" width="398" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -26,9 +26,9 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="LDy-4B-Fh2" secondAttribute="trailing" constant="16" id="4LX-fr-AyF"/>
+                        <constraint firstAttribute="trailing" secondItem="LDy-4B-Fh2" secondAttribute="trailing" constant="8" id="4LX-fr-AyF"/>
                         <constraint firstItem="LDy-4B-Fh2" firstAttribute="centerY" secondItem="9y4-gw-ZAC" secondAttribute="centerY" id="VTH-wd-gxA"/>
-                        <constraint firstItem="LDy-4B-Fh2" firstAttribute="leading" secondItem="9y4-gw-ZAC" secondAttribute="leading" constant="16" id="yJ0-PV-T2L"/>
+                        <constraint firstItem="LDy-4B-Fh2" firstAttribute="leading" secondItem="9y4-gw-ZAC" secondAttribute="leading" constant="8" id="yJ0-PV-T2L"/>
                     </constraints>
                 </view>
             </subviews>

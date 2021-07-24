@@ -11,6 +11,8 @@ final class TransactionListHeaderView: UIView {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var currentAmountLabel: UILabel!
     @IBOutlet private weak var currentAmountInBaseLabel: UILabel!
+    @IBOutlet private weak var thisMonthTotalInAmountLabel: UILabel!
+    @IBOutlet private weak var thisMonthTotalOutAmountLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,7 +24,7 @@ final class TransactionListHeaderView: UIView {
         instantiateView()
     }
     
-    func configure(with account: Account) {
+    func configure(with account: Account, latestTransaction: MonthTransaction?) {
         nameLabel.text = account.nickname
         currentAmountLabel.text = account.currency + CurrencyFormatter.shared.format(with: account.currentBalance)
         if account.currency != "JPY" {
@@ -31,6 +33,13 @@ final class TransactionListHeaderView: UIView {
         } else {
             currentAmountInBaseLabel.isHidden = true
         }
+        guard let latestTransaction = latestTransaction, latestTransaction.date ==  Date.currentMonthYearStr() else {
+            thisMonthTotalInAmountLabel.text = account.currency + "0"
+            thisMonthTotalOutAmountLabel.text = account.currency + "0"
+            return
+        }
+        thisMonthTotalInAmountLabel.text = account.currency + CurrencyFormatter.shared.format(with: latestTransaction.totalIn)
+        thisMonthTotalOutAmountLabel.text = account.currency + CurrencyFormatter.shared.format(with: latestTransaction.totalOut)
     }
 }
 
