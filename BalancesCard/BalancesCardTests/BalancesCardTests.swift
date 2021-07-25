@@ -44,7 +44,9 @@ class BalancesCardTests: XCTestCase {
             return
         }
         let json = try Data(contentsOf: url)
-        let response = try? JSONDecoder().decode(TransactionResponse.self, from: json)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let response = try? decoder.decode(TransactionResponse.self, from: json)
         guard let transaction = response?.transactions[2] else {
             XCTFail("Failed to decode accounts.json")
             return
@@ -53,7 +55,8 @@ class BalancesCardTests: XCTestCase {
         XCTAssertEqual(transaction.accountId, 2)
         XCTAssertEqual(transaction.amount, -421.0)
         XCTAssertEqual(transaction.categoryId, 112)
-        XCTAssertEqual(transaction.date, "2017-05-23T00:00:00+09:00")
+        let targetDate = ISO8601DateFormatter().date(from: "2017-05-23T00:00:00+09:00")
+        XCTAssertEqual(transaction.date, targetDate)
         XCTAssertEqual(transaction.description, "スターバックス 原宿店")
         XCTAssertEqual(transaction.id, 23)
     }
@@ -63,5 +66,17 @@ class BalancesCardTests: XCTestCase {
         let formattedString = CurrencyFormatter.shared.format(with: amount)
         
         XCTAssertEqual(formattedString, "1,234,567,273.63")
+    }
+    
+    func testDateFunctions() throws {
+        guard let targetDate = ISO8601DateFormatter().date(from: "2017-05-23T00:00:00+09:00") else {
+            return
+        }
+        XCTAssertEqual(targetDate.getYear(), 2017)
+        XCTAssertEqual(targetDate.getMonth(), 5)
+        XCTAssertEqual(targetDate.getDay(), 23)
+    }
+    
+    func testAccountViewModel() throws {
     }
 }
